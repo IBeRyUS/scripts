@@ -1,0 +1,21 @@
+set -e
+current_branch=$(git branch --show-current)
+
+if [ -z "$current_branch" ]; 
+then
+    echo "You are not in a git repository folder."
+    exit 1
+fi
+
+if [ -z "$1" ];
+then
+    echo "Please provide base branch name to pull from remote."
+    echo "Usage syntax = $ pull_from_git branch_name"
+else
+    echo "Pulling branch $1 from remote."
+    git fetch --all -p
+    git checkout $1 && git pull
+
+    git checkout $current_branch
+    git status
+fi
