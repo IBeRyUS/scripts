@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 cp .bash_aliases ~/.
 cd #
 mkdir .trash

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/home/iberyus/eclipse/eclipse
+Icon=/home/iberyus/eclipse/icon.xpm
+Terminal=false
+StartupNotify=true
+
